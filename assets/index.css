@@ -1,0 +1,26 @@
+html {
+    background-color: #dcdcdc;
+    --head-color: brown;
+    --max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: cursive, 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    color: var(--head-color);
+}
+
+.container {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    border: 2px solid var(--head-color);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+pre {
+    white-space: break-spaces;
+}
+
+disable.img{ width: 100%; }
