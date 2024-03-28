@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+
+ app:
+  build: 
+    dockerfile: Dockerfile
+    context: .
+  image: blog:latest
+  restart: "unless-stopped"
+  env_file:
+          - .env
+  ports:
+        - ${SHAREPORT}:8080
+  volumes:
+    - "${SHAREDIR}/markdown:/markdown"
+    - "${SHAREDIR}/templates:/templates"
+    - "${SHAREDIR}/assets:/assets"
+    - "/etc/timezone:/etc/timezone:ro"
+    - "/etc/localtime:/etc/localtime:ro"
+
